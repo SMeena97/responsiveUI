@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <style>
+         table{
+            border-collapse: collapse;
+             width:750px;
+             margin:50px auto;
+         }
+		 tr:nth-of-type(odd){
+		 background:#eee;
+		 }
+		 th{
+		 background:#3498db;
+		 color:white;
+		 font-weight:bold;
+		 }
+		 td,th{
+		 padding:10px;
+		 brder:1px solid #ccc;
+		 text-align:left;
+		 font-size:18px;
+		 }
+         table th,table td{
+             text-align: center;
+             padding:10px;
+         }
+         table th{
+             text-transform: uppercase;
+         }
+         td,tr{
+             border:1px solid #ddd;
+         }
+         @media screen and (max-width: 760px),
+         (min-device-width:760px) and (max-device-width:1024px){
+             table{
+                 width:100%;
+             }
+             table,thead,tbody,th,td,tr{
+			 display:block;
+			 }
+             thead tr{
+                 position:absolute;
+                 top:-999px;
+                 left:-999px;
+             }
+			 tr{
+			 border:1px solid #ccc;
+			 }
+			 td{
+			 border:none;
+			 border-bottom:1px solid #eee;
+			 position:relative;
+			 
+			 }
+			 td:before{
+			 position:absolute;
+			 top:6px;
+			 left:6px;
+			 width:45%;
+			 padding-right:10px;
+			 white-space:nowrap;
+			 content:attr(data-column);
+			 color:#000;
+			 font-weight:bold;
+			 }
+         }
+        </style>
+    </head>
+    <body>
+<table>
+   
+    <thead>
+        <tr>
+            <th>Account</th>
+            <th>Due Date</th>
+            <th>Amount</th>
+            <th>Period</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-column="Account">Visa-39</td>
+            <td data-column="Due Date">12/3/3030</td>
+            <td data-column="Amount">$233</td>
+            <td data-column="Period">2/3/2112-3/2/3422</td>
+        </tr>
+        <tr>
+            <td data-column="Account">Visa-39</td>
+            <td data-column="Due Date">12/3/3030</td>
+            <td data-column="Amount">$233</td>
+            <td data-column="Period">2/3/2112-3/2/3422</td>
+        </tr>
+        <tr>
+            <td data-column="Account">Visa-39</td>
+            <td data-column="Due Date">12/3/3030</td>
+            <td data-column="Amount">$233</td>
+            <td data-column="Period">2/3/2112-3/2/3422</td>
+        </tr>
+        <tr>
+            <td data-column="Account">Visa-39</td>
+            <td data-column="Due Date">12/3/3030</td>
+            <td data-column="Amount">$233</td>
+            <td data-column="Period">2/3/2112-3/2/3422</td>
+        </tr>
+    </tbody>
+    </table>
+</body>
+</html>
